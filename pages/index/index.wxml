@@ -1,14 +1,27 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+<view class="login">
+  <view class="text">登录</view>
+  <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      required
+      clearable
+      label="用户名"
+      icon="question-o"
+      placeholder="请输入用户名"
+      bind:click-icon="onClickIcon"
+    />
+
+    <van-field
+      value="{{ password }}"
+      type="password"
+      label="密码"
+      placeholder="请输入密码"
+      required
+      border="{{ false }}"
+    />
+  </van-cell-group>
+<view class="btn">
+  <van-button bindtap="login" type="primary" size="large">登录</van-button>
 </view>
-<van-button type="primary">按钮</van-button>
+</view>
