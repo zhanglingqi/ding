@@ -1,4 +1,41 @@
-<!--logs.wxml-->
-<view >
- ddd
+<view class="week">
+  <view class="week-day"> 
+    <view class="day" data-id='{{index}}' wx:for="{{weekDay}}" wx:key="id" bindtap="handleWeek">
+      <view>{{item.week}}</view>
+      <view class="{{index == indexArr ? 'day-num active' : 'day-num'}}">{{item.day}}</view>
+    </view>
+  </view>
+  <view class="conent">
+  <van-swipe-cell id="swipe-cell"  right-width="{{ 65 }}" left-width="{{ 65 }}"
+    async-close  bind:close="onClose">
+    <view slot="left" class="btn-left">修改</view>
+    <van-cell-group>
+      <view class="list">
+      <!-- 左 -->
+        <view>
+          <van-icon class="peopel" name="friends" />
+        </view>
+        <!-- 右 -->
+        <view >
+          <view class="info">
+            <view class="info-name">张三,请假一天</view>
+            <view class="info-img">
+              <van-icon name="photo-o" />
+              <van-icon name="photo-o" />
+              <van-icon name="photo-o" />
+            </view>
+          </view>
+          <view class="info-msg">说是请假回老家看望外公外婆</view>
+        </view>
+      </view>
+    </van-cell-group>
+    <view slot="right" class="btn-right" >删除</view>
+  </van-swipe-cell>
+  </view>
+  
 </view>
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="home-o">记录</van-tabbar-item>
+  <van-tabbar-item icon="search">日历</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
+</van-tabbar>
