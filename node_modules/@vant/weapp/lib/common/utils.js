@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-exports.requestAnimationFrame = exports.addUnit = exports.getSystemInfoSync = exports.nextTick = exports.range = exports.isNumber = exports.isObj = exports.isDef = void 0;
+exports.addUnit = exports.getSystemInfoSync = exports.nextTick = exports.range = exports.isNumber = exports.isObj = exports.isDef = void 0;
 function isDef(value) {
   return value !== undefined && value !== null;
 }
@@ -40,17 +40,3 @@ function addUnit(value) {
   return isNumber(value) ? value + 'px' : value;
 }
 exports.addUnit = addUnit;
-function requestAnimationFrame(cb) {
-  var systemInfo = getSystemInfoSync();
-  if (systemInfo.platform === 'devtools') {
-    return nextTick(cb);
-  }
-  return wx
-    .createSelectorQuery()
-    .selectViewport()
-    .boundingClientRect()
-    .exec(function () {
-      cb();
-    });
-}
-exports.requestAnimationFrame = requestAnimationFrame;

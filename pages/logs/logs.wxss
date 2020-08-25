@@ -73,3 +73,9 @@
   color: #ffffff;
   cursor: pointer;
 }
+.add-addbtn {
+  position: fixed;
+  bottom: 200rpx;
+  right: 50rpx;
+  font-size: 40rpx;
+}

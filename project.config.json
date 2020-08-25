@@ -31,7 +31,7 @@
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.12.1",
+	"libVersion": "2.11.1",
 	"appid": "wxd1d4f03b836bd39a",
 	"projectname": "dingding",
 	"debugOptions": {

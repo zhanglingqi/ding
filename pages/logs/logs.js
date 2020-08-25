@@ -11,6 +11,11 @@ Page({
       {id:7,week:'六',day:'18'}
     ],
     indexArr:0,
+    show: false,
+    date: '',
+    minDate: new Date(2010, 0, 1).getTime(),
+    maxDate: new Date(2020, 11, 31).getTime(),
+    today:new Date().getTime(),
   },
   onChange(event) {
     // event.detail 的值为当前选中项的索引
@@ -20,6 +25,24 @@ Page({
     this.setData({
       indexArr:event.currentTarget.dataset.id
     })
+  },
+  onDisplay() {
+    this.setData({
+      show:true
+    })
+  },
+  onClose() {
+    this.setData({ show: false });
+  },
+  formatDate(date) {
+    date = new Date(date);
+    return `${date.getMonth() + 1}/${date.getDate()}`;
+  },
+  onConfirm(event) {
+    this.setData({
+      show: false,
+      date: this.formatDate(event.detail),
+    });
   },
   onClose(event) {
     const { position, instance } = event.detail;
