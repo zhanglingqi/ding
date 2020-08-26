@@ -1,13 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/infoAdd/infoAdd"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -16,10 +17,16 @@
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
+    "van-dialog": "@vant/weapp/dialog/index",
     "van-swipe-cell": "@vant/weapp/swipe-cell/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-calendar": "@vant/weapp/calendar/index"
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index"
   },
   "sitemapLocation": "sitemap.json"
 }

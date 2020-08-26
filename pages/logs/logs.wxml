@@ -1,7 +1,7 @@
 <view class="picker-time">
     <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
     <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" min-date="{{ minDate }}"
-  max-date="{{ maxDate }}" default-date="{{today}}" show-confirm="{{ false }}" position="bottom" close-on-click-overlay="{{true}}" safe-area-inset-bottom="{{true}}" />
+  max-date="{{ maxDate }}" default-date="{{today}}" show-confirm="{{ false }}"/>
 </view>
 <view class="week">
   <view class="week-day"> 
@@ -12,7 +12,7 @@
   </view>
   <view class="conent">
   <van-swipe-cell id="swipe-cell"  right-width="{{ 65 }}" left-width="{{ 65 }}"
-    async-close  bind:close="onClose">
+    async-close  bind:close="onCloseTable">
     <view slot="left" class="btn-left">修改</view>
     <van-cell-group>
       <view class="list">
@@ -38,7 +38,7 @@
   </van-swipe-cell>
   </view>
 </view>
-<view class="add-addbtn">
+<view class="add-addbtn" bindtap="handleAdd" >
   <van-icon name="plus" />
 </view>
 <van-tabbar active="{{ active }}" bind:change="onChange">
@@ -46,3 +46,6 @@
   <van-tabbar-item icon="search">日历</van-tabbar-item>
   <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
 </van-tabbar>
+<!-- 组件占位符 -->
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

@@ -1,6 +1,7 @@
 //logs.js
 const util = require('../../utils/util.js')
-
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
   data: {
     active: 0,
@@ -20,6 +21,7 @@ Page({
   onChange(event) {
     // event.detail 的值为当前选中项的索引
     this.setData({ active: event.detail });
+    console.log(event.detail)
   },
   handleWeek(event) {
     this.setData({
@@ -44,7 +46,7 @@ Page({
       date: this.formatDate(event.detail),
     });
   },
-  onClose(event) {
+  onCloseTable(event) {
     const { position, instance } = event.detail;
     switch (position) {
       case 'left':
@@ -56,9 +58,17 @@ Page({
           message: '确定删除吗？',
         }).then(() => {
           instance.close();
+          Toast.success('删除成功');
+        }).catch(() => {
+
         });
         break;
     }
+  },
+  handleAdd() {
+    wx.navigateTo({
+      url: '../infoAdd/infoAdd',
+    })
   },
   onLoad: function () {
     
