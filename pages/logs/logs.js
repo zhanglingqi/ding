@@ -14,8 +14,8 @@ Page({
     indexArr:0,
     show: false,
     date: '',
-    minDate: new Date(2010, 0, 1).getTime(),
-    maxDate: new Date(2020, 11, 31).getTime(),
+    // minDate: new Date(2020, 0, 1).getTime(),
+    maxDate: new Date(2021, 11, 31).getTime(),
     today:new Date().getTime(),
   },
   onChange(event) {

@@ -11,8 +11,7 @@
     </view>
   </view>
   <view class="conent">
-  <van-swipe-cell id="swipe-cell"  right-width="{{ 65 }}" left-width="{{ 65 }}"
-    async-close  bind:close="onCloseTable">
+  <van-swipe-cell id="swipe-cell"  right-width="{{ 65 }}" left-width="{{ 65 }}" async-close  bind:close="onCloseTable">
     <view slot="left" class="btn-left">修改</view>
     <van-cell-group>
       <view class="list">

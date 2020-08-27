@@ -1,3 +1,8 @@
-.leave {
-  padding: 20rpx;
+.btn {
+  margin:100rpx auto;
+  width: 90%;
+}
+.updata-img {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
 }
