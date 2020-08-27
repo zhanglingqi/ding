@@ -1,4 +1,4 @@
-// pages/infoAdd/infoAdd.js
+var unit = require('../../utils/util')
 Page({
 
   /**
@@ -9,6 +9,14 @@ Page({
     show:false,
     columns: ['事假', '调休', '病假', '年假', '产假','陪产假','婚假','例假','丧假','哺乳假'],
     pickerVal:'',
+    userName:'',
+    userConent:'',
+    startTime:'',
+    showStart:false,
+    currentStart:new Date().getTime(),
+    currentEnd:new Date().getTime(),
+    showEnd:false,
+    endTime:'',
   },
   showPopup() {
     this.setData({ show: true });
@@ -19,6 +27,41 @@ Page({
     this.setData({
       pickerVal:value
     })
+  },
+  showStarttime() {
+    this.setData({
+      showStart:true
+    })
+  },
+  showEndtime() {
+    this.setData({
+      showEnd:true
+    })
+  },
+  startChange(event) {
+    this.setData({
+      startTime:unit.formatTime(new Date(event.detail)),
+      showStart:false,
+    })
+  },
+  endChange(event) {
+    this.setData({
+      endTime:unit.formatTime(new Date(event.detail)),
+      showEnd:false,
+    })
+  },
+  endStart() {
+    this.setData({
+      showEnd:false
+    })
+  },
+  closeStart() {
+    this.setData({
+      showStart:false,
+    })
+  },
+  onCloseEnd() {
+
   },
   onClose() {
     this.setData({ show: false });

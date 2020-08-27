@@ -5,6 +5,20 @@
       <van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose">
         <van-picker columns="{{ columns }}" bind:change="onChange" />
       </van-popup>
+      <van-cell-group>
+        <van-field label="员工" model:value="{{ userName }}" placeholder="请输入员工姓名"/>
+      </van-cell-group>
+      <van-cell-group>
+        <van-field label="详细描述" model:value="{{ userConent }}" placeholder="请输入内容"/>
+      </van-cell-group>
+      <van-cell title="开始时间" bind:click="showStarttime" is-link value="{{startTime}}" arrow-direction="down" />
+      <van-popup show="{{ showStart }}" position="bottom" custom-style="height: 40%;">
+        <van-datetime-picker type="datetime" value="{{ currentStart }}" bind:confirm="startChange" bind:cancel="closeStart"/>
+      </van-popup>
+       <van-cell title="结束时间" bind:click="showEndtime" is-link value="{{endTime}}" arrow-direction="down" />
+      <van-popup show="{{ showEnd }}" position="bottom" custom-style="height: 40%;">
+        <van-datetime-picker type="datetime" value="{{ currentEnd }}" bind:confirm="endChange" bind:cancel="endStart"/>
+      </van-popup>
     </view>
   </van-tab>
   <van-tab title="出差">内容 2</van-tab>
