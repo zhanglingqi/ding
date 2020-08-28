@@ -1,8 +1,9 @@
-<view class="picker-time">
-    <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
-    <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" min-date="{{ minDate }}"
-  max-date="{{ maxDate }}" default-date="{{today}}" show-confirm="{{ false }}"/>
-</view>
+<picker mode="date" bindchange="bindDateChange" value="{{date}}">
+  <view class="picker">
+    选择日期
+    <text class="areaDetail">{{date}}</text>
+  </view>
+</picker>
 <view class="week">
   <view class="week-day"> 
     <view class="day" data-id='{{index}}' wx:for="{{weekDay}}" wx:key="id" bindtap="handleWeek">

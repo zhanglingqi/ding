@@ -6,3 +6,19 @@
   margin-top: 20rpx;
   margin-left: 30rpx;
 }
+.picker {
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: #323233;
+  padding-bottom: 20rpx;
+}
+.line {
+  height: 1rpx;
+  background: #ebedf0;
+  width: 91.5%;
+  margin: 0 auto;
+}
+.areaDetail{
+  padding-left: 76rpx;
+}

@@ -1,4 +1,4 @@
-var unit = require('../../utils/util')
+var unit = require('../../utils/util');
 Page({
 
   /**
@@ -20,6 +20,12 @@ Page({
     fileList: [
       { url: 'https://img.yzcdn.cn/vant/leaf.jpg', name: '图片1' },
     ],
+    leaveDay:'',
+    address:'',
+    areaNmae:'',
+    areaList:'',
+    region:[],
+    showArea:false,
   },
   showPopup() {
     this.setData({ show: true });
@@ -83,6 +89,29 @@ Page({
     wx.reLaunch({
       url: '../logs/logs'
       })
+  },
+  showArea() {
+    this.setData({
+      showArea:true,
+    })
+  },
+  startArea(event) {
+    console.log(event)
+    this.setData({
+      showArea:false,
+    })
+  },
+  closeArea() {
+    this.setData({
+      showArea:false,
+    })
+  },
+  bindRegionChange(evevt) {
+    console.log('picker发送选择改变，携带值为', evevt.detail.value)
+    this.setData({
+      region: evevt.detail.value,
+      areaList:evevt.detail.value.join(' ')
+    })
   },
   onCloseEnd() {
 

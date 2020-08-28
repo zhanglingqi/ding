@@ -12,11 +12,14 @@ Page({
       {id:7,week:'六',day:'18'}
     ],
     indexArr:0,
-    show: false,
     date: '',
-    // minDate: new Date(2020, 0, 1).getTime(),
-    maxDate: new Date(2021, 11, 31).getTime(),
     today:new Date().getTime(),
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
   },
   onChange(event) {
     // event.detail 的值为当前选中项的索引
@@ -28,23 +31,9 @@ Page({
       indexArr:event.currentTarget.dataset.id
     })
   },
-  onDisplay() {
-    this.setData({
-      show:true
-    })
-  },
-  onClose() {
-    this.setData({ show: false });
-  },
   formatDate(date) {
     date = new Date(date);
     return `${date.getMonth() + 1}/${date.getDate()}`;
-  },
-  onConfirm(event) {
-    this.setData({
-      show: false,
-      date: this.formatDate(event.detail),
-    });
   },
   onCloseTable(event) {
     const { position, instance } = event.detail;
