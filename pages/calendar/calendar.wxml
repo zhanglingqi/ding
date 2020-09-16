@@ -1,0 +1,19 @@
+<picker mode="date" bindchange="bindDateChange" value="{{date}}">
+  <view class="picker">
+    选择日期
+    <text class="areaDetail">{{date}}</text>
+  </view>
+</picker>
+<view class="line"></view>
+<van-calendar
+  poppable="{{ false }}"
+  show-confirm="{{ false }}"
+  show-title="{{false}}"
+  show-subtitle="{{false}}"
+  max-date="{{ maxDate }}"
+  min-date="{{ minDate }}"
+  formatter="{{ formatter }}"
+  bind:select="calenderSelect"
+  class="calendar"
+/>
+<view class="week">星期{{selectDay}}</view>

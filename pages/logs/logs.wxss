@@ -11,6 +11,7 @@
 .day {
   font-size: 28rpx;
   text-align: center;
+  width: 80rpx;
 }
 .day-num {
   font-size: 36rpx;

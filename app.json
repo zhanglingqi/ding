@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/infoAdd/infoAdd"
+    "pages/infoAdd/infoAdd",
+    "pages/calendar/calendar",
+    "pages/info/info"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,8 +15,6 @@
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
     "van-field": "@vant/weapp/field/index",
-    "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
     "van-dialog": "@vant/weapp/dialog/index",
@@ -30,6 +30,28 @@
     "van-datetime-picker": "@vant/weapp/datetime-picker/index",
     "van-uploader": "@vant/weapp/uploader/index",
     "van-area": "@vant/weapp/area/index"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath":"./assets/img/icon_component.png",
+        "selectedIconPath":"./assets/img/icon_component_HL.png",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "iconPath":"./assets/img/icon_component.png",
+        "selectedIconPath":"./assets/img/icon_component_HL.png",
+        "text": "日历"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath":"./assets/img/icon_component.png",
+        "selectedIconPath":"./assets/img/icon_component_HL.png",
+        "text": "我的"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

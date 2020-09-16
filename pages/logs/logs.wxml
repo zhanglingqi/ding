@@ -41,11 +41,6 @@
 <view class="add-addbtn" bindtap="handleAdd" >
   <van-icon name="plus" />
 </view>
-<van-tabbar active="{{ active }}" bind:change="onChange">
-  <van-tabbar-item icon="home-o">记录</van-tabbar-item>
-  <van-tabbar-item icon="search">日历</van-tabbar-item>
-  <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
-</van-tabbar>
 <!-- 组件占位符 -->
 <van-dialog id="van-dialog" />
 <van-toast id="van-toast" />

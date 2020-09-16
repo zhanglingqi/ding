@@ -1,15 +1,7 @@
-.btn {
-  margin:100rpx auto;
-  width: 90%;
-}
-.updata-img {
-  margin-top: 20rpx;
-  margin-left: 30rpx;
-}
 .picker {
   padding-top: 20rpx;
   padding-left: 30rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #323233;
   padding-bottom: 20rpx;
 }
@@ -21,4 +13,10 @@
 }
 .areaDetail{
   padding-left: 76rpx;
+}
+.van-calendar__days {
+  /* background-color: #ccc; */
+}
+.week {
+  text-align: center;
 }
