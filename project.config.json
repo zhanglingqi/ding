@@ -83,6 +83,20 @@
 					"id": -1,
 					"name": "pages/calendar/calendar",
 					"pathName": "pages/calendar/calendar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/info/info",
+					"pathName": "pages/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pasword/pasword",
+					"pathName": "pages/pasword/pasword",
 					"scene": null
 				}
 			]

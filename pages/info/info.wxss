@@ -1,1 +1,18 @@
-/* pages/info/info.wxss */
+.header {
+  padding: 20rpx 20px 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+  background-color: #cccccc;
+}
+.icon {
+  font-size: 200rpx;
+}
+.info {
+  margin-left: 20rpx;
+}
+.line {
+  margin-top: 30rpx;
+}
+.btn {
+  margin-top: 100rpx;
+}

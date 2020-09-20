@@ -1,0 +1,24 @@
+<van-field
+    value="{{ password }}"
+    type="password"
+    label="旧密码"
+    placeholder="请输入密码"
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="新密码"
+    placeholder="请输入密码"
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="重新输入密码"
+    placeholder="请输入密码"
+    border="{{ false }}"
+  />
+  <view class="btn">
+  <van-button bindtap="login" type="primary" size="large">确定修改</van-button>
+</view>

@@ -16,4 +16,4 @@
   bind:select="calenderSelect"
   class="calendar"
 />
-<view class="week">星期{{selectDay}}</view>
+<view class="week">这里展示选中的详情星期{{selectDay}}</view>

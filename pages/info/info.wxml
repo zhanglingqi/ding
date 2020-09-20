@@ -1,2 +1,17 @@
-<!--pages/info/info.wxml-->
-<text>pages/info/info.wxml</text>
+<view class="header">
+  <van-icon class="icon" name="user-circle-o" />
+  <view class="info">
+    <view>张老板</view>
+    <view>北京市第一煤炭公司</view>
+  </view>
+</view>
+<view class="line"></view>
+<van-cell
+  is-link
+  title="修改密码"
+  link-type="navigateTo"
+  url="/pages/pasword/pasword"
+/>
+<view class="btn">
+  <van-button bindtap="login" type="danger" size="large">退出登录</van-button>
+</view>
